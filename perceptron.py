@@ -10,7 +10,7 @@ y_values = [] # y coordinates
 outputs = [] # the correct answers
 
 # read data from a file
-with open('test1.txt', 'r') as f:
+with open('test_data.txt', 'r') as f:
 	while 1:
 		line = f.readline().strip().split()
 		if not line:
