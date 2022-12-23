@@ -17,10 +17,7 @@ with open('test_data.txt', 'r') as f:
 			break
 		x_values.append(float(line[0]))
 		y_values.append(float(line[1]))
-		if line[2] == '0':
-			outputs.append(-1.0)
-		else:
-			outputs.append(float(line[2]))
+		outputs.append(float(line[2]))
 
 
 def calculate_output(weights, bias, x, y):
@@ -62,10 +59,11 @@ def gradient_descent():
 		rmse = '{:.3f}'.format(math.sqrt(global_err/len(x_values)))
 		print(f'Iteration: {iteration+1} : RMSE = {rmse}')
 
+		# break if we predicted everything correctly
 		if global_err == 0:
 			break
 
-	# print final values up to two decimal places
+	# print the first four digits of each final value
 	print(f'\nDecision boundary line equation: {str(weights[0])[:4]}x + {str(weights[1])[:4]}y + {str(bias)[:4]} = 0')
 
 
