@@ -11,7 +11,7 @@ TOTAL_ITERATIONS = 100
 patterns = []
 
 # read data from a file
-with open('test1.txt', 'r') as f:
+with open('test_data.txt', 'r') as f:
 	while 1:
 		line = f.readline().strip().split()
 		if not line:
